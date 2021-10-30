@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid } from "@mui/material";
 import { productData } from "../data/ProductData";
 import Item from "../components/Item";
+import { productStore } from "../stores/store";
 
 const Cart: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const Cart: React.FC = () => {
         {productData.map((item) => {
           return (
             <Grid item md={4} xs={6}>
-              <Item {...item} key={item.id} />
+              <Item key={item.id} item={item} productStore={productStore} />
             </Grid>
           );
         })}

@@ -25,7 +25,11 @@ const Picture: React.FC = () => {
             position: "absolute",
           }}
         >
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
             <Typography variant="h3" color="white">
               &copy; Nutthanon
             </Typography>

@@ -1,8 +1,19 @@
 import React from "react";
 import { Box, Typography, Toolbar, AppBar, Button, Badge } from "@mui/material";
 import { AiOutlineShoppingCart, AiFillApple } from "react-icons/ai";
+import { observer } from "mobx-react";
+import { productsStoreImpl } from "../stores/store";
 
-const Nav: React.FC = () => {
+interface productStoreProps {
+  productStore: productsStoreImpl;
+}
+
+const Nav: React.FC<productStoreProps> = observer(({ productStore }) => {
+  const count = productStore.product.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
   return (
     <Box
       sx={{
@@ -21,20 +32,22 @@ const Nav: React.FC = () => {
             </Typography>
             <Button
               endIcon={
-                <Badge badgeContent={1} color="error">
+                <Badge badgeContent={count} color="error">
                   <AiOutlineShoppingCart color="white" />
                 </Badge>
               }
             >
-              <Typography variant="h6" color="white">
-                Cart
-              </Typography>
+              <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                <Typography variant="h6" color="white">
+                  Cart
+                </Typography>
+              </Box>
             </Button>
           </Toolbar>
         </Box>
       </AppBar>
     </Box>
   );
-};
+});
 
 export default Nav;

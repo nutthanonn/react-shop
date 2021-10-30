@@ -3,7 +3,15 @@ import { makeObservable, action, observable } from "mobx";
 interface productTypes {
   id: string;
   productName: string;
-  productImage: string;
+  picture: string;
+  price: number;
+  quantity: number;
+}
+
+interface productIn {
+  id: string;
+  productName: string;
+  picture: string;
   price: number;
 }
 
@@ -17,7 +25,7 @@ export class productsStoreImpl {
     });
   }
 
-  addToCart(item: productTypes) {
+  addToCart(item: productIn) {
     const productItem = { ...item, quantity: 1 };
     this.product.push(productItem);
   }

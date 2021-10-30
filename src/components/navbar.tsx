@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Toolbar, AppBar, Button, Badge } from "@mui/material";
-import { AiOutlineShoppingCart, AiFillApple } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaStoreAlt } from "react-icons/fa";
 import { observer } from "mobx-react";
 import { productsStoreImpl } from "../stores/store";
 
@@ -25,7 +26,7 @@ const Nav: React.FC<productStoreProps> = observer(({ productStore }) => {
         <Box>
           <Toolbar>
             <Box sx={{ mr: 1 }}>
-              <AiFillApple size="30" />
+              <FaStoreAlt size="30" />
             </Box>
             <Typography variant="h4" sx={{ flexGrow: 1 }}>
               Store

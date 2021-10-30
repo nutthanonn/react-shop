@@ -9,7 +9,11 @@ const Home: React.FC = () => {
       <AboutMe />
       <Typography variant="h3" sx={{ textAlign: "center", p: 5 }}>
         Shopping Cart
+        <Typography variant="body2" sx={{ textAlign: "center" }}>
+          using Mobx-React
+        </Typography>
       </Typography>
+
       <Cart />
     </Box>
   );

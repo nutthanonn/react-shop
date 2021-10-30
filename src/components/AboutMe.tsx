@@ -49,6 +49,7 @@ const AboutMe: React.FC = () => {
                 whileHover={{
                   scale: 1.2,
                 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <SiPostgresql size="100" color={blue[900]} />
               </motion.div>
@@ -63,6 +64,7 @@ const AboutMe: React.FC = () => {
                 whileHover={{
                   scale: 1.2,
                 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <AiFillGithub size="100" />
               </motion.div>

@@ -3,6 +3,7 @@ import { makeObservable, action, observable } from "mobx";
 interface productTypes {
   id: string;
   productName: string;
+  productImage: string;
   price: number;
 }
 

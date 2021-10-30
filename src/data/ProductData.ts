@@ -31,7 +31,7 @@ export const productData: ProduceType[] = [
     id: "A04",
     productName: "Cherry",
     picture:
-      "https://cdn.pixabay.com/photo/2014/12/21/23/34/cherry-575547__480.png",
+      "https://cdn.pixabay.com/photo/2017/06/14/15/18/cherries-2402449_1280.jpg",
     price: 50,
   },
   {

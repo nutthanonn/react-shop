@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, CssBaseline, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
 const Picture: React.FC = () => {
   return (
@@ -24,9 +25,11 @@ const Picture: React.FC = () => {
             position: "absolute",
           }}
         >
-          <Typography variant="h3" color="primary">
-            &copy; Nutthanon
-          </Typography>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <Typography variant="h3" color="white">
+              &copy; Nutthanon
+            </Typography>
+          </motion.div>
         </Box>
       </Box>
     </Box>

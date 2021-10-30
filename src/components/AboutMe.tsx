@@ -4,7 +4,7 @@ import { blue, green } from "@mui/material/colors";
 import { SiReact, SiPostgresql } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
-import "./icon.css";
+import "./style.css";
 
 const AboutMe: React.FC = () => {
   return (

@@ -1,5 +1,14 @@
 import React from "react";
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  CardActions,
+  Typography,
+  Button,
+} from "@mui/material";
+import "./style.css";
 
 interface ProduceType {
   id: string;
@@ -12,9 +21,13 @@ const Item: React.FC<ProduceType> = (props) => {
   return (
     <Box>
       <Card>
+        <CardMedia image={props.picture} component="img" height="300" />
         <CardContent>
-          <Typography>{props.productName}</Typography>
+          <Typography variant="h4">{props.productName}</Typography>
         </CardContent>
+        <CardActions sx={{ display: "flex" }}>
+          <Button>Add to cart</Button>
+        </CardActions>
       </Card>
     </Box>
   );

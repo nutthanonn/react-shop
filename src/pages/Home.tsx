@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Box, Typography } from "@mui/material";
 import AboutMe from "../components/AboutMe";
 import Cart from "./Cart";
-import { useInView } from "react-intersection-observer";
 
 const Home: React.FC = () => {
-  const { ref, InView } = useInView<boolean>();
-
   return (
     <Box>
       <AboutMe />

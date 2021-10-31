@@ -8,9 +8,9 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { productsStoreImpl } from "../../stores/store";
+import { productsStoreImpl } from "../../stores/productStore";
 import { observer } from "mobx-react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Slide } from "react-toastify";
 import { injectStyle } from "react-toastify/dist/inject-style";
 
 if (typeof window !== "undefined") {
@@ -29,7 +29,7 @@ interface ProduceType {
 const Item: React.FC<ProduceType> = observer(({ item, productStore }) => {
   const addCart = () => {
     productStore.addToCart({ ...item });
-    toast.success("add to cart!");
+    toast("Add to cart!", { transition: Slide });
   };
 
   return (
@@ -47,12 +47,10 @@ const Item: React.FC<ProduceType> = observer(({ item, productStore }) => {
         </CardActions>
       </Card>
       <ToastContainer
-        position="bottom-left"
+        limit={3}
+        position="top-center"
         autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
         closeOnClick
-        rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover

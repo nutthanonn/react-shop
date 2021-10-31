@@ -19,7 +19,7 @@ const RoadMap: React.FC = () => {
         opacity: 1,
         transition: {
           type: "spring",
-          delay: 0.4,
+          delay: 0.2,
         },
       });
     } else {
@@ -34,16 +34,15 @@ const RoadMap: React.FC = () => {
         opacity: 1,
         transition: {
           type: "spring",
-          delay: 0.4,
+          delay: 0.2,
         },
       });
     } else {
       animationCode.start({
-        x: -100,
+        x: 100,
         opacity: 0,
       });
     }
-    console.log(InviewCode);
   }, [InviewCode, InviewCodeReview, animationCode, animation]);
 
   return (

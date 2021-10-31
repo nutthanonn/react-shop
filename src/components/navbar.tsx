@@ -3,7 +3,7 @@ import { Box, Typography, Toolbar, AppBar, Button, Badge } from "@mui/material";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaStoreAlt } from "react-icons/fa";
 import { observer } from "mobx-react";
-import { productsStoreImpl } from "../stores/store";
+import { productsStoreImpl } from "../stores/productStore";
 
 interface productStoreProps {
   productStore: productsStoreImpl;

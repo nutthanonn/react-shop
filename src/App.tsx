@@ -1,22 +1,20 @@
-import React, { useRef } from "react";
+import React from "react";
 import Picture from "./pages/picture";
-import Home from "./pages/Home";
 import Nav from "./components/navbar";
 import "./App.css";
-import { productStore } from "./stores/store";
+import { productStore } from "./stores/productStore";
 import RoadMap from "./pages/roadmap";
+import Cart from "./pages/Cart";
+import AboutMe from "./components/AboutMe";
 
 const App: React.FC = () => {
-  const ref = useRef(null);
   return (
     <div>
       <Nav productStore={productStore} />
       <Picture />
-      <Home />
+      <AboutMe />
+      <Cart />
       <RoadMap />
-      <button
-        onClick={() => console.log(ref.current.getBoundingClientRect())}
-      ></button>
     </div>
   );
 };

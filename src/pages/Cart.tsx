@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
 import { productData } from "../data/ProductData";
-import Item from "../components/Item";
+import Item from "../components/cart/Item";
 import { productStore } from "../stores/store";
 
 const Cart: React.FC = () => {

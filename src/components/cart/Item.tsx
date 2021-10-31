@@ -8,9 +8,14 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { productsStoreImpl } from "../stores/store";
+import { productsStoreImpl } from "../../stores/store";
 import { observer } from "mobx-react";
+import { ToastContainer, toast } from "react-toastify";
+import { injectStyle } from "react-toastify/dist/inject-style";
 
+if (typeof window !== "undefined") {
+  injectStyle();
+}
 interface ProduceType {
   item: {
     id: string;
@@ -22,6 +27,11 @@ interface ProduceType {
 }
 
 const Item: React.FC<ProduceType> = observer(({ item, productStore }) => {
+  const addCart = () => {
+    productStore.addToCart({ ...item });
+    toast.success("add to cart!");
+  };
+
   return (
     <Box>
       <Card>
@@ -33,11 +43,20 @@ const Item: React.FC<ProduceType> = observer(({ item, productStore }) => {
           </Typography>
         </CardContent>
         <CardActions sx={{ display: "flex" }}>
-          <Button onClick={() => productStore.addToCart({ ...item })}>
-            Add to cart
-          </Button>
+          <Button onClick={addCart}>Add to cart</Button>
         </CardActions>
       </Card>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Box>
   );
 });

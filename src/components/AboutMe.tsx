@@ -5,7 +5,12 @@ import { motion } from "framer-motion";
 import { SiReact, SiPostgresql } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
-import "./style.css";
+
+const buttonVariants = {
+  hover: {
+    scale: [1, 1.2, 1],
+  },
+};
 
 const AboutMe: React.FC = () => {
   return (
@@ -17,11 +22,7 @@ const AboutMe: React.FC = () => {
         <Grid item md={3} xs={6}>
           <Box>
             <IconButton>
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                }}
-              >
+              <motion.div variants={buttonVariants} whileHover="hover">
                 <SiReact size="100" color={blue[300]} />
               </motion.div>
             </IconButton>
@@ -31,11 +32,7 @@ const AboutMe: React.FC = () => {
         <Grid item md={3} xs={6}>
           <Box>
             <IconButton>
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                }}
-              >
+              <motion.div variants={buttonVariants} whileHover="hover">
                 <FaNodeJs size="100" color={green[800]} />
               </motion.div>
             </IconButton>
@@ -45,12 +42,7 @@ const AboutMe: React.FC = () => {
         <Grid item md={3} xs={6}>
           <Box>
             <IconButton>
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <motion.div variants={buttonVariants} whileHover="hover">
                 <SiPostgresql size="100" color={blue[900]} />
               </motion.div>
             </IconButton>
@@ -60,12 +52,7 @@ const AboutMe: React.FC = () => {
         <Grid item md={3} xs={6}>
           <Box>
             <IconButton>
-              <motion.div
-                whileHover={{
-                  scale: 1.2,
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <motion.div variants={buttonVariants} whileHover="hover">
                 <AiFillGithub size="100" />
               </motion.div>
             </IconButton>

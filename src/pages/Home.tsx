@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <Typography variant="h3" sx={{ textAlign: "center", p: 5 }}>
         Shopping Cart
         <Typography variant="body2" sx={{ textAlign: "center", pt: 1 }}>
-          https://github.com/nutthanonn
+          using MobX-react
         </Typography>
       </Typography>
 

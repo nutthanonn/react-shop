@@ -43,7 +43,8 @@ const RoadMap: React.FC = () => {
         opacity: 0,
       });
     }
-  }, [InviewCode, InviewCodeReview]);
+    console.log(InviewCode);
+  }, [InviewCode, InviewCodeReview, animationCode, animation]);
 
   return (
     <Box sx={{ mt: 2, bgcolor: blue["50"] }}>
@@ -72,7 +73,7 @@ const RoadMap: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <Typography>Hello</Typography>
+          <Typography variant="h4">Hello I'm Nutthanon Thongcharoen</Typography>
         </Grid>
         <Grid
           item
@@ -84,7 +85,7 @@ const RoadMap: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <Typography>Hello</Typography>
+          <Typography variant="h4">Interest web programming</Typography>
         </Grid>
         <Grid
           item
@@ -94,7 +95,6 @@ const RoadMap: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            mt: 30,
           }}
         >
           <motion.div animate={animationCode}>

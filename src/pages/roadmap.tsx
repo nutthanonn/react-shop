@@ -22,6 +22,7 @@ const RoadMap: React.FC = () => {
       animation.start({
         x: 0,
         opacity: 1,
+        scale: 1,
         transition: {
           type: "spring",
           delay: 0.2,
@@ -31,12 +32,14 @@ const RoadMap: React.FC = () => {
       animation.start({
         x: -100,
         opacity: 0,
+        scale: 0.5,
       });
     }
     if (InviewCodeReview) {
       animationCode.start({
         x: 0,
         opacity: 1,
+        scale: 1,
         transition: {
           type: "spring",
           delay: 0.2,
@@ -46,6 +49,7 @@ const RoadMap: React.FC = () => {
       animationCode.start({
         x: 100,
         opacity: 0,
+        scale: 0.5,
       });
     }
 
@@ -54,6 +58,7 @@ const RoadMap: React.FC = () => {
       animationMobile.start({
         x: 0,
         opacity: 1,
+        scale: 1,
         transition: {
           type: "spring",
           delay: 0.2,
@@ -63,12 +68,14 @@ const RoadMap: React.FC = () => {
       animationMobile.start({
         x: -100,
         opacity: 0,
+        scale: 0.5,
       });
     }
     if (InviewCodeReviewMobile) {
       animationCodeMobile.start({
         x: 0,
         opacity: 1,
+        scale: 1,
         transition: {
           type: "spring",
           delay: 0.2,
@@ -78,6 +85,7 @@ const RoadMap: React.FC = () => {
       animationCodeMobile.start({
         x: 100,
         opacity: 0,
+        scale: 0.5,
       });
     }
   }, [
@@ -180,8 +188,8 @@ const RoadMap: React.FC = () => {
               src={code}
               alt=""
               ref={refCodeMobile}
-              width="200"
-              height="200"
+              width="300"
+              height="300"
             />
           </motion.div>
         </Grid>
@@ -224,8 +232,8 @@ const RoadMap: React.FC = () => {
               src={codeReview}
               alt=""
               ref={refCodeReviewMobile}
-              width="200"
-              height="200"
+              width="300"
+              height="300"
             />
           </motion.div>
         </Grid>

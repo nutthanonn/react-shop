@@ -10,7 +10,7 @@ const Cart: React.FC = () => {
       <Typography variant="h3" sx={{ textAlign: "center", p: 5 }}>
         Shopping Cart
         <Typography variant="body2" sx={{ textAlign: "center", pt: 1 }}>
-          using MobX-react
+          using MobX-React
         </Typography>
       </Typography>
       <Grid container sx={{ textAlign: "center", padding: 2 }} spacing={2}>

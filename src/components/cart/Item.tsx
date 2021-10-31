@@ -35,7 +35,12 @@ const Item: React.FC<ProduceType> = observer(({ item, productStore }) => {
   return (
     <Box>
       <Card>
-        <CardMedia image={item.picture} component="img" height="300" />
+        <CardMedia
+          image={item.picture}
+          component="img"
+          height="300"
+          sx={{ backgroundSize: "cover" }}
+        />
         <CardContent>
           <Typography variant="h4">{item.productName}</Typography>
           <Typography variant="h5" color="gray">

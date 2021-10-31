@@ -31,7 +31,7 @@ const Picture: React.FC = () => {
             transition={{ delay: 0.2 }}
           >
             <Typography variant="h3" color="white">
-              &copy; Nutthanon All Project
+              &copy; Nutthanon All Project Responsive website
             </Typography>
           </motion.div>
         </Box>

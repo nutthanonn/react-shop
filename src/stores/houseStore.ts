@@ -1,18 +1,18 @@
 import { makeObservable, action, observable } from "mobx";
 
-interface HoteStoreType {}
+interface HouseStoreType {}
 
-class HotelStoreImpl {
+class HouseStoreImpl {
   // export
-  Hotel: HoteStoreType[] = [];
+  House: HouseStoreType[] = [];
 
   constructor() {
     makeObservable(this, {
-      Hotel: observable,
+      House: observable,
       //method:action
     });
   }
   //action
 }
 
-export const HotelStore = new HotelStoreImpl();
+export const HouseStore = new HouseStoreImpl();

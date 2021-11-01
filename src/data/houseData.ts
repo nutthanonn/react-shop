@@ -64,7 +64,7 @@ export const HotelData: HouseDataType[] = [
     price: 5000000,
     picture: {
       picture1:
-        "https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681__480.jpg",
+        "https://cdn.pixabay.com/photo/2017/03/28/12/16/chairs-2181980__480.jpg",
       picture2:
         "https://cdn.pixabay.com/photo/2017/03/28/12/16/chairs-2181980__480.jpg",
       picture3:

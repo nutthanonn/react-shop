@@ -38,32 +38,36 @@ const HomeBooking: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           p: 5,
-          border: 1,
         }}
       >
         <Box sx={{ width: 600 }}>
           <TextField
             label={<BiSearchAlt2 size="30" />}
-            placeholder="search..."
+            placeholder="search home No..."
             fullWidth
             color="primary"
           />
         </Box>
       </Box>
       <FormGroup
-        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          mb: 3,
+        }}
       >
         <FormControlLabel
           control={<Checkbox />}
-          label="Label"
+          label="status"
           onChange={() => setCheckButton(!checkButton)}
         />
       </FormGroup>
       <Container>
-        <Grid container>
+        <Grid container spacing={4}>
           {data.map((item: any) => {
             return (
-              <Grid item key={item.id}>
+              <Grid item key={item.id} md={4} xs={6}>
                 <Item item={item} />
               </Grid>
             );

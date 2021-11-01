@@ -46,9 +46,11 @@ const Item: React.FC<ItemProps> = ({ item }) => {
       <Card>
         <CardHeader
           avatar={
-            <Tooltip title="seller" placement="top">
-              <Avatar></Avatar>
-            </Tooltip>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              <Tooltip title="seller" placement="top">
+                <Avatar></Avatar>
+              </Tooltip>
+            </Box>
           }
           title="Nutthanon Thongcharoen"
           subheader={Moment().format("llll")}
@@ -72,14 +74,16 @@ const Item: React.FC<ItemProps> = ({ item }) => {
             </Box>
           </Box>
           <Typography variant="h6">HouseNo. : {item.villageNo}</Typography>
-          <Typography sx={{ color: "gray" }}>
-            {item.size} Size Have {item.room} Room and {item.bedRoom} bedRoom
-            and {item.toilet} Toilet
-          </Typography>
-          <Typography>
-            Price :{" "}
-            {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-          </Typography>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Typography sx={{ color: "gray" }}>
+              {item.size} Size Have {item.room} Room and {item.bedRoom} bedRoom
+              and {item.toilet} Toilet
+            </Typography>
+            <Typography>
+              Price :{" "}
+              {item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+            </Typography>
+          </Box>
         </CardContent>
         <CardActions>
           <Button variant="outlined">Seemore</Button>

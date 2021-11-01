@@ -12,6 +12,7 @@ import { productsStoreImpl } from "../../stores/productStore";
 import { observer } from "mobx-react";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import { injectStyle } from "react-toastify/dist/inject-style";
+import { motion } from "framer-motion";
 
 if (typeof window !== "undefined") {
   injectStyle();
@@ -35,12 +36,14 @@ const Item: React.FC<ProduceType> = observer(({ item, productStore }) => {
   return (
     <Box>
       <Card>
-        <CardMedia
-          image={item.picture}
-          component="img"
-          height="300"
-          sx={{ backgroundSize: "cover" }}
-        />
+        <motion.div whileHover={{ opacity: 0.7 }}>
+          <CardMedia
+            image={item.picture}
+            component="img"
+            height="300"
+            sx={{ backgroundSize: "cover" }}
+          />
+        </motion.div>
         <CardContent>
           <Typography variant="h4">{item.productName}</Typography>
           <Typography variant="h5" color="gray">

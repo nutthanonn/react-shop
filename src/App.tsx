@@ -7,6 +7,7 @@ import RoadMap from "./pages/roadmap";
 import Cart from "./pages/Cart";
 import AboutMe from "./components/AboutMe";
 import HomeBooking from "./pages/houseBooking";
+import Animation from "./pages/animetion";
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <Cart />
       <RoadMap />
       <HomeBooking />
+      <Animation />
     </div>
   );
 };

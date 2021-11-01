@@ -12,6 +12,7 @@ import {
 import { BiSearchAlt2 } from "react-icons/bi";
 import { HotelData } from "../data/houseData";
 import Item from "../components/houseBooking/item";
+import { pink } from "@mui/material/colors";
 
 const HomeBooking: React.FC = () => {
   const [data, setData] = useState<any>(HotelData);
@@ -29,8 +30,8 @@ const HomeBooking: React.FC = () => {
   }, [checkButton, data]);
 
   return (
-    <Box>
-      <Box sx={{ textAlign: "center" }}>
+    <Box sx={{ bgcolor: pink[50] }}>
+      <Box sx={{ textAlign: "center", pt: 10 }}>
         <Typography variant="h2">Booking</Typography>
       </Box>
       <Box
@@ -43,7 +44,7 @@ const HomeBooking: React.FC = () => {
         <Box sx={{ width: 600 }}>
           <TextField
             label={<BiSearchAlt2 size="30" />}
-            placeholder="search home No..."
+            placeholder="search 3 word for HomeNo."
             fullWidth
             color="primary"
           />
@@ -54,7 +55,6 @@ const HomeBooking: React.FC = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
-          mb: 3,
         }}
       >
         <FormControlLabel
@@ -63,11 +63,11 @@ const HomeBooking: React.FC = () => {
           onChange={() => setCheckButton(!checkButton)}
         />
       </FormGroup>
-      <Container>
+      <Container sx={{ p: 10 }}>
         <Grid container spacing={4}>
           {data.map((item: any) => {
             return (
-              <Grid item key={item.id} md={4} xs={6}>
+              <Grid item key={item.id} md={4} xs={12}>
                 <Item item={item} />
               </Grid>
             );

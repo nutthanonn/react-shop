@@ -1,14 +1,13 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Anime from "../video/Anime.mp4";
-import { purple } from "@mui/material/colors";
 
 const Animetion: React.FC = () => {
   return (
     <Box
       sx={{
         height: "120vw",
-        display: "flex",
+        display: { xs: "none", md: "flex" },
         alignItems: "flex-end",
         bgcolor: "rgb(5, 3, 44)",
       }}

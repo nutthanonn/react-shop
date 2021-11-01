@@ -47,6 +47,7 @@ const HomeBooking: React.FC = () => {
             placeholder="search 3 word for HomeNo."
             fullWidth
             color="primary"
+            sx={{ bgcolor: "whitesmoke" }}
           />
         </Box>
       </Box>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import Picture from "./pages/picture";
 import Nav from "./components/navbar";
 import { productStore } from "./stores/productStore";
@@ -8,6 +7,7 @@ import Cart from "./pages/Cart";
 import AboutMe from "./components/AboutMe";
 import HomeBooking from "./pages/houseBooking";
 import Animation from "./pages/animetion";
+import Footer from "./pages/footer";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +19,7 @@ const App: React.FC = () => {
       <RoadMap />
       <HomeBooking />
       <Animation />
+      <Footer />
     </div>
   );
 };

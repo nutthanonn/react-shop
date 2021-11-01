@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 interface pictureProps {
   picture1?: string;
@@ -8,21 +8,23 @@ interface pictureProps {
 }
 
 interface ItemProps {
-  id: string;
-  status: boolean;
-  villageNo: string;
-  size: string; //small medium large
-  room: number;
-  bedRoom: number;
-  toilet: number;
-  price: number;
-  picture?: pictureProps;
+  item: {
+    id: string;
+    status: boolean;
+    villageNo: string;
+    size: string; //small medium large
+    room: number;
+    bedRoom: number;
+    toilet: number;
+    price: number;
+    picture?: pictureProps;
+  };
 }
 
-const Item: React.FC = () => {
+const Item: React.FC<ItemProps> = ({ item }) => {
   return (
     <Box>
-      <p>Hello</p>
+      <p>{item.status ? "Hello" : "Nut"}</p>
     </Box>
   );
 };

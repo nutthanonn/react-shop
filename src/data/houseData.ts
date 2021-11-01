@@ -55,7 +55,7 @@ export const HotelData: HouseDataType[] = [
   },
   {
     id: uuidv4(),
-    status: true,
+    status: false,
     villageNo: "100/17",
     size: "small",
     room: 7,
@@ -91,7 +91,7 @@ export const HotelData: HouseDataType[] = [
   },
   {
     id: uuidv4(),
-    status: true,
+    status: false,
     villageNo: "100/17",
     size: "small",
     room: 4,

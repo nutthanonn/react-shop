@@ -16,8 +16,8 @@ const Cart: React.FC = () => {
       <Grid container sx={{ textAlign: "center", padding: 2 }} spacing={2}>
         {productData.map((item) => {
           return (
-            <Grid item md={4} xs={6}>
-              <Item key={item.id} item={item} productStore={productStore} />
+            <Grid item md={4} xs={6} key={item.id}>
+              <Item item={item} productStore={productStore} />
             </Grid>
           );
         })}
